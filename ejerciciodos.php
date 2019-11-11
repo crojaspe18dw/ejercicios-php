@@ -2,20 +2,30 @@
 <html>
 <head>
 	<title>ejercicio dos</title>
+	<style type="text/css">
+		<?php
+	$tamano=$_POST['tamano'];
+	$grosor=$_POST['grosor'];
+
+	$tamano=$tamano."px";
+	$grosor=$grosor."px";
+	?>
+		div{
+			border: <?php echo $grosor; ?> solid black;
+			width: <?php echo $tamano  ?>;
+			height: <?php echo $tamano  ?>;
+			background-color: green;
+			
+
+		}
+
+	</style>
 </head>
 <body>
-	<?php
-	//$tamano=$_POST('tamano');
-	//$grosor=$_POST('grosor');
-	$tamano=1000;
-
-	$lienzo=imagecreatetruecolor($tamano,$tamano);
-	$verde=imagecolorallocate($lienzo, red, green, blue);
-	imagerectangle($lienzo, $tamano, $tamano, $tamano, $tamano, $verde);
-	header('content-Type:image/phg');
-	imagepng($lienzo);
-	imagedestroy($lienzo);
-	?>
+	
+	<div>
+		
+	</div>
 
 </body>
 </html>
